@@ -1,4 +1,4 @@
-# File Loader Service
+# What is File Loader Service?
 
 This is a Spring Boot application that monitors a folder for `.txt` files containing Call Detail Records (CDRs), parses each line into structured data, stores the data in a PostgreSQL table, and logs each file's processing status into a control table.
 
@@ -28,7 +28,7 @@ call_detail_records: Stores parsed data from each line of CDR file
 cdr_logs: Tracks metadata of file processing like start time, end time, successes and failures
 
 
-# Setup Instruction
+# How to Setup?
 
 - Clone the Repository: git clone https://github.com/yourusername/file-loader-service.git
 cd file-loader-service
