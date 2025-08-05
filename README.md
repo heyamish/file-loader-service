@@ -52,7 +52,7 @@ Edit your `application.properties`:
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/ussd
 spring.datasource.username=postgres
-spring.datasource.password=your_password
+spring.datasource.password=db_password
 
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
