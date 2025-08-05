@@ -19,7 +19,3 @@ This is a Spring Boot application that monitors a folder for `.txt` files contai
 - Spring Data JPA
 - PostgreSQL
 - Hibernate ORM
-
-
-## 🧬 Folder Structure
-
