@@ -1,0 +1,16 @@
+# Build & IDE files
+target/
+*.class
+*.log
+*.jar
+.idea/
+.vscode/
+*.iml
+
+# OS junk
+.DS_Store
+
+# Sensitive files
+application.properties
+*.argfile
+.env
