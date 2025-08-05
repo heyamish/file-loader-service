@@ -22,19 +22,6 @@ file-loader-service/
 └── pom.xml
 
 
-# Configuration
-
-Edit your `application.properties`:
-
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/ussd
-spring.datasource.username=postgres
-spring.datasource.password=db_password
-
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-cdr.folder.path=./cdr-files
-
 # Database Tables
 
 call_detail_records: Stores parsed data from each line of CDR file
@@ -57,3 +44,16 @@ cd file-loader-service
  Run the Application:
 - Using terminal: ./mvnw spring-boot:run
 - Or run FileLoaderServiceApplication.java from your IDE
+
+
+# Configuration
+
+Edit your `application.properties`:
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/ussd
+spring.datasource.username=postgres
+spring.datasource.password=your_password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+cdr.folder.path=./cdr-files
