@@ -12,10 +12,48 @@ This is a Spring Boot application that monitors a folder for `.txt` files contai
 - Deletes file after successful processing
 
 
-# Tech Stack
+# Project Structure
 
-- Java 17
-- Spring Boot 3
-- Spring Data JPA
-- PostgreSQL
-- Hibernate ORM
+file-loader-service/
+├── src/
+├── cdr-files/ ← Folder monitored for input files
+│ └── sample_cdr.txt ← Example input file
+├── README.md
+└── pom.xml
+
+
+# Configuration
+
+Edit your `application.properties`:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/ussd
+spring.datasource.username=postgres
+spring.datasource.password=db_password
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+cdr.folder.path=./cdr-files
+
+# Database Tables
+
+call_detail_records: Stores parsed data from each line of CDR file
+cdr_logs: Tracks metadata of file processing like start time, end time, successes and failures
+
+
+# Setup Instruction
+
+- Clone the Repository: git clone https://github.com/yourusername/file-loader-service.git
+cd file-loader-service
+
+- Set Up PostgreSQL:
+  - Create a database named: ussd
+  - Update application.properties with your database credentials
+
+- Prepare Input Folder:
+  - Create a folder named cdr-files inside the root project directory
+  - Add .txt files with 33 pipe-separated fields (|) per line
+
+ Run the Application:
+- Using terminal: ./mvnw spring-boot:run
+- Or run FileLoaderServiceApplication.java from your IDE
